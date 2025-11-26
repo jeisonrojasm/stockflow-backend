@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "start:dev": "nodemon --watch src --exec node src/index.js",
+    "lint": "eslint .",
+    "migrate": "npx sequelize db:migrate",
+    "seed": "npx sequelize db:seed:all",
+    "apidoc": "apidoc -i src/controllers -o apidoc/",
+    "test": "echo \"no tests yet\" && exit 0"
   },
   "author": "Jeison Esteban Rojas Mora",
   "license": "ISC",
@@ -16,5 +22,10 @@
     "sequelize": "^6.37.7",
     "sequelize-cli": "^6.6.3",
     "winston": "^3.18.3"
+  },
+  "devDependencies": {
+    "apidoc": "^1.2.0",
+    "eslint": "^9.39.1",
+    "nodemon": "^3.1.11"
   }
 }
