@@ -6,13 +6,16 @@ services:
     env_file: .env
     ports:
       - "3000:3000"
+      - "8080:8080"
     depends_on:
       postgres:
         condition: service_healthy
     # command: sh -c "npm install && npx sequelize db:migrate && npx sequelize db:seed:all && npm run start:dev"
-    command: sh -c "npm install && npx sequelize db:migrate && npx sequelize db:seed:all && npm run start:dev"
+    command: sh -c "npm install && npx sequelize db:migrate && npx sequelize db:seed:all && npm run apidoc && npm run apidoc:serve & npm run start:dev"
     networks:
       - app-network
+    volumes:
+    - ./apidoc:/usr/src/app/apidoc
 
   postgres:
     image: postgres:15

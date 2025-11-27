@@ -23,7 +23,8 @@ ENV NODE_ENV=development
 COPY --from=builder /usr/src/app /usr/src/app 
 
 # Exponer puerto
-EXPOSE 3000 
+EXPOSE 3000
+EXPOSE 8080
 
 # Ejecutar en modo desarrollo. 
 CMD ["node", "src/index.js"]

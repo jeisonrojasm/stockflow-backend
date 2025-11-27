@@ -9,6 +9,7 @@
     "migrate": "npx sequelize db:migrate",
     "seed": "npx sequelize db:seed:all",
     "apidoc": "apidoc -i src/controllers -o apidoc/",
+    "apidoc:serve": "npx http-server apidoc -p 8080",
     "test": "echo \"no tests yet\" && exit 0"
   },
   "author": "Jeison Esteban Rojas Mora",
@@ -30,6 +31,7 @@
   "devDependencies": {
     "apidoc": "^1.2.0",
     "eslint": "^9.39.1",
+    "http-server": "^14.1.1",
     "nodemon": "^3.1.11"
   }
 }
