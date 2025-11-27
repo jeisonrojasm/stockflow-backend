@@ -108,6 +108,45 @@ Una vez el backend esté corriendo, puedes acceder a la documentación por medio
 http://localhost:8080
 ```
 
+### Conexión a pgAdmin
+
+La base de datos PostgreSQL y la herramienta de administración pgAdmin también están dockerizadas, por lo que no es necesario instalarlas localmente.
+
+Para acceder a pgAdmin y ver la base de datos:
+
+1. Abre tu navegador y visita la siguiente URL:
+
+   ```bash
+   http://localhost:5050
+   ```
+
+2. Inicia sesión utilizando las credenciales definidas en tu archivo `.env`:
+
+   ```bash
+   PGADMIN_DEFAULT_EMAIL
+   PGADMIN_DEFAULT_PASSWORD
+   ```
+
+3. Una vez dentro del panel de pgAdmin:
+   - Haz clic derecho en la sección **Servers** (barra lateral izquierda).
+   - Selecciona **Register** > **Server**.
+
+4. En el formulario de configuración:
+
+   🧾 **Pestaña General**
+   - **Name**: Ingresa un nombre descriptivo, por ejemplo: `StockFlow`.
+
+   🔌 **Pestaña Connection**
+   - **Host name/address**: Definido en la variable `DATABASE_HOST` del archivo `.env`
+   - **Port**: Definido en la variable `DATABASE_PORT` del archivo `.env`
+   - **Username**: Definido en la variable `DATABASE_USER` del archivo `.env`
+   - **Password**: Definido en la variable `DATABASE_PASSWORD` del archivo `.env`
+   - Opcional: Marca la casilla *Save password* para no tener que ingresarla cada vez.
+  
+5. Haz clic en **Save** para guardar la configuración y conectarte.
+
+   Una vez creada la conexión, puedes explorar las bases de datos, ver las tablas, ejecutar consultas y gestionar los datos desde la interfaz de pgAdmin.
+
 ## 👨‍💻 Autor
 
 Desarrollado por **Jeison Rojas Mora** - *Fullstack Developer*
