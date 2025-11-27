@@ -38,7 +38,10 @@
 - Node.js
 - Sequelize
 - PostgreSQL
-- Docker
+- Docker & Docker Compose
+- Joi para validación de datos
+- JWT para autenticación
+- Apidoc para documentación de la API
 
 ## ✅ Prerrequisitos
 
@@ -79,6 +82,14 @@ Una vez finalizado el proceso, el backend quedará disponible en:
 ```arduino
 http://localhost:3000
 ```
+
+### 📝 Scripts npm disponibles
+
+> ⚠️ Los scripts que se muestran a continuación no deben ejecutarse manualmente, ya que la aplicación los ejecuta automáticamente en el momento adecuado. Se incluyen en esta documentación únicamente con fines informativos.
+
+- `npm run start:dev` → Levanta el servidor en modo desarrollo.
+- `npm run apidoc` → Genera la documentación de la API en la carpeta `apidoc`.
+- `npm run apidoc:serve` → Sirve la documentación generada en `http://localhost:8080`.
 
 ## 📚 Documentación con Apidoc
 
